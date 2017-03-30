@@ -30,6 +30,7 @@ springBoot {
 
 repositories {
     mavenCentral()
+    maven { url "https://dl.bintray.com/ylemoigne/maven" }
 }
 
 task wrapper(type: Wrapper) {
@@ -47,6 +48,8 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-data-mongodb")
 
     compile group: 'org.apache.commons', name: 'commons-lang3', version: commons_lang_version
+
+    compile 'fr.javatic.mongo:mongo-jackson-codec:3.2.2__0.5'
 
     testCompile('org.springframework.boot:spring-boot-starter-test')
     testCompile group: 'io.github.benas', name: 'random-beans', version: random_beans_version
